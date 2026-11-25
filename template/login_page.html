@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Вход — Shopix</title>
+<link rel="stylesheet" href="loginPage.css">
+</head>
+<body>
+<main class="auth">
+<section class="brand">
+<div><div class="logo">Shop<span><b>ix</b></span></div><p class="tagline">Покупай умнее.<br>Живи лучше.</p></div>
+<div class="art" aria-hidden="true"><div class="bag"></div><div class="spark">✦</div></div>
+</section>
+<section class="formside">
+<h1>Вход в аккаунт</h1>
+<p class="intro">Введите логин и пароль,<br>чтобы продолжить</p>
+<form id="loginForm" action="/" method="POST">
+<div class="field"><label for="login">Логин</label><div class="inputwrap"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></svg><input id="login" name="login" placeholder="Введите логин" autocomplete="username" class="{{if .ErrLogin}}error{{end}}">
+  {{if .ErrLogin}}
+    <p class="{{if .ErrLogin}}errLog{{end}}" style="color: red;">{{.ErrLogin}}</p>
+  {{end}}
+
+</div></div>
+<div class="field"><label for="password">Пароль</label><div class="inputwrap"><svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><input id="password" name="password" type="password" placeholder="Введите пароль" autocomplete="current-password" class="{{if .ErrPass}}error{{end}}">
+  {{if .ErrPass}}
+    <p class="{{if .ErrPass}}errPass{{end}}" style="color: red;">{{.ErrPass}}</p>
+  {{end}}
+  
+
+<button class="show" type="button" data-toggle="password" aria-label="Показать пароль">◉</button></div></div>
+<button class="submit" type="submit">Войти&nbsp; ›</button><div class="status" id="status" role="status"></div>
+</form>
+<div class="switch">Нет аккаунта?<a href="/register">Зарегистрироваться</a></div>
+</section>
+</main>
+<script>
+document.querySelector('[data-toggle="password"]').addEventListener("click", () => {
+  const password = document.querySelector("#password");
+  password.type = password.type === "password" ? "text" : "password";
+});
+</script>
+</body>
+</html>
