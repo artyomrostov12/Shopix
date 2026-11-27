@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль | Shopix</title>
+    <link rel="stylesheet" href="../static/profile.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <nav class="navigation">
+            <div class="logo">
+                <span>Shopix</span>
+            </div>
+            <ul>
+                <li><button type="button"><i data-lucide="house"></i>Главная</button></li>
+                <li><button type="button"><i data-lucide="shopping-cart"></i>Корзина</button></li>
+                <li><button type="button"><i data-lucide="user-round"></i>Профиль</button></li>
+            </ul>
+        </nav>
+    </aside>
+    <main class="main-content">
+        <header class="profile-header">
+            <h1>Профиль</h1>
+            <p>Ваши данные и настройки</p>
+        </header>
+        
+<div class="profile-content">
+
+    <section class="user-card">
+        <h2>Пользователь</h2>
+
+        <ul>
+            <li><button type="button"><i data-lucide="package"></i>Мои заказы</button></li>
+            <li><button type="button"><i data-lucide="heart"></i>Избранное</button></li>
+            <li><button type="button"><i data-lucide="settings"></i>Настройки</button></li>
+            <li><button type="button"><i data-lucide="log-out"></i>Выйти из аккаунта</button></li>
+        </ul>
+    </section>
+
+    <section class="orders-card">
+        <h2>Мои заказы</h2>
+    </section>
+
+    <section class="settings-card">
+
+        <h2><i data-lucide="sliders-horizontal"></i>Настройки</h2>
+
+        <div class="setting-item">
+            <div class="setting-info">
+                <h3>Тёмная тема</h3>
+                <p>Изменить оформление сайта</p>
+            </div>
+
+            <label class="switch">
+                <input type="checkbox" id="darkMode">
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <div class="setting-item">
+            <div class="setting-info">
+                <h3>Уведомления</h3>
+                <p>Получать уведомления о заказах</p>
+            </div>
+
+            <label class="switch">
+                <input type="checkbox" id="notifications" checked>
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <div class="setting-item">
+            <div class="setting-info">
+                <h3>Email-рассылки</h3>
+                <p>Получать новости и предложения</p>
+            </div>
+
+            <label class="switch">
+                <input type="checkbox" id="emailNews">
+                <span class="slider"></span>
+            </label>
+        </div>
+
+    </section>
+
+</div>
+
+
+            </section>
+
+        </div>
+
+    
+        </div>
+        
+
+    </main>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../js/profile.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
